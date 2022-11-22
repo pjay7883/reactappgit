@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "name": "jay",
+      "username": "jayp",
+      "email": "xyz@gmail.com",
+      "phone": "2545545574",
+      "website": "myweb.com",
+      "id": 8
+    },
+    {
+      "name": "riya",
+      "username": "riya233",
+      "email": "riya@gmail.com",
+      "phone": "028425555",
+      "website": "riyaweb.com",
+      "id": 9
+    },
+    {
+      "name": "kanal",
+      "username": "kanal12",
+      "email": "kanal@gmail.com",
+      "phone": "02554555",
+      "website": "kanalweb.com",
+      "id": 10
+    },
+    {
+      "name": "jay",
+      "username": "jayi",
+      "email": "jay@gmail.com",
+      "phone": "0225488454",
+      "website": "web.com",
+      "id": 11
+    },
+    {
+      "name": "jamal",
+      "username": "jamal01",
+      "email": "jamal@gmail.com",
+      "phone": "2522542545",
+      "website": "jamalweb.com",
+      "id": 12
+    }
+  ]
+}
