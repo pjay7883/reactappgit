@@ -1,6 +1,35 @@
 import React from "react";
+import { useState } from 'react'
 
-const Contact = () => {
+function Contact() {
+
+  const [details, setDetails] = useState({
+    email: '',
+    password: '',
+    
+
+  })
+
+  const PostData = async (e) => {
+    e.preventDefault()
+
+    const { email, password } = details;
+
+    const res = await fetch("https://website-b76bd-default-rtdb.firebaseio.com/website.json",
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email,
+          password,
+
+        })
+      })
+
+  }
+
   return (
     <div className="container">
       <div className="py-4">
@@ -8,23 +37,23 @@ const Contact = () => {
         <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input
-              type="email"
+            <input type='email'
+              placeholder='Enter your Email address'
               class="form-control"
               id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
+              aria-describedby="emailHelp" onChange={(e) =>
+                setDetails({ ...details, email: e.target.value })} />
+
             <small id="emailHelp" class="form-text text-muted">
               We'll never share your email with anyone else.
             </small>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input
-              type="password"
+            <input type='text' placeholder='Enter your Password'
               class="form-control"
-              id="exampleInputPassword1"
-            />
+              id="exampleInputPassword1" onChange={(e) =>
+                setDetails({ ...details, password: e.target.value })} />
           </div>
           <div class="form-group form-check">
             <input
@@ -36,13 +65,14 @@ const Contact = () => {
               Check me out
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" onClick={PostData} class="btn btn-primary">
             Submit
           </button>
+
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Contact;

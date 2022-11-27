@@ -23,10 +23,7 @@ const AddUser = () => {
     await axios.post("http://localhost:3003/users", user);
     history.push("/");
   };
-
-   //Add local storage data
     
-
   return (
     <div className="container">
       <div className="w-75 mx-auto shadow p-5">
