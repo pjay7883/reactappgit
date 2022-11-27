@@ -20,7 +20,7 @@ const About = () => {
 
           In contrast to a landing page, your About Us page is the ideal place to accommodate a number of objectives:
         </p>
-        <p className="lead">Made By Jaykumar Patel</p>
+        <p className="lead">Made By </p>
       </div>
     </div>
   );

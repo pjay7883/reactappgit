@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import { useHistory } from "react-router-dom";
+
 
 const AddUser = () => {
   let history = useHistory();
@@ -22,6 +23,10 @@ const AddUser = () => {
     await axios.post("http://localhost:3003/users", user);
     history.push("/");
   };
+
+   //Add local storage data
+    
+
   return (
     <div className="container">
       <div className="w-75 mx-auto shadow p-5">
