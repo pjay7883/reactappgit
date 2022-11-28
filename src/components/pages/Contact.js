@@ -15,7 +15,7 @@ function Contact() {
 
     const { email, password } = details;
 
-    const res = await fetch("https://website-b76bd-default-rtdb.firebaseio.com/website.json",
+    const res = await fetch("https://web2-11ca8-default-rtdb.firebaseio.com/website.json",
       {
         method: 'POST',
         headers: {
@@ -50,10 +50,7 @@ function Contact() {
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type='text' placeholder='Enter your Password'
-              class="form-control"
-              id="exampleInputPassword1" onChange={(e) =>
-                setDetails({ ...details, password: e.target.value })} />
+            <input type='password' placeholder='Enter your Password' class="form-control" id="exampleInputPassword1" onChange={(e) => setDetails({ ...details, password: e.target.value })} />
           </div>
           <div class="form-group form-check">
             <input
